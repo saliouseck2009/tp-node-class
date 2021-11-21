@@ -1,0 +1,6 @@
+{
+  "source": "./",
+  "destination": "./docs",
+  "excludes": ["(node_modules|seeders|providers|docs|test)"],
+  "plugins": [{"name": "esdoc-node"}]
+}
