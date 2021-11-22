@@ -7,7 +7,7 @@
     "version": "1.0.0",
     "description": "apiDoc mtdsi",
     "title": "apiDoc mtdsi",
-    "url": "https://mtdsi.herokuapp.com"
+    "url": "https://td-classe.herokuapp.com"
   },
   "main": "index.js",
   "scripts": {

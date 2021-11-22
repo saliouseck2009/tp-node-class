@@ -19,25 +19,25 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-let corsOptions = {
-  origin: '*'
-};
+// let corsOptions = {
+//   origin: '*'
+// };
 
-if (process.env.ACTIVATE_CORS === 'true') {
-  let whitelist = ['http://localhost:4200'];
+// if (process.env.ACTIVATE_CORS === 'true') {
+//   let whitelist = ['http://localhost:4200'];
 
-  corsOptions = {
-    origin: function (origin, callback) {
-      if (whitelist.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    }
-  };
-}
+//   corsOptions = {
+//     origin: function (origin, callback) {
+//       if (whitelist.indexOf(origin) !== -1) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     }
+//   };
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 //CONNEXION A LA BASE DE DONNES
 MongooseService.connectToDB();
