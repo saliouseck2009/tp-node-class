@@ -9,7 +9,11 @@ const bookSchema = mongoose.Schema({
     publisher:{type: String},
     pages:{type: Number},
     description:{type: String},
-    website: {type:String}
+    website: {type:String},
+    authors: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Author"
+    }
 });
 
 module.exports=mongoose.model("Book",bookSchema);

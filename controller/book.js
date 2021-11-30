@@ -31,3 +31,11 @@ exports.editBook = (req,res,next)=>{
     .then(()=> res.status(200).json({message: "objet modifié "}))
     .catch(error=>res.status(400).json({error}));
 }
+
+exports.addAuthorToBook = (bookId, author)=>{
+    return Book.findByIdAndUpdate(
+        bookId,
+        {$push: {authors: author._id}},
+        {new : true, useFindAndModify:false}
+    );
+};
