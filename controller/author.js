@@ -17,7 +17,7 @@ exports.addAuthor = (req,res,next)=>{
     console.log(req.body);
     const author = new Author({...req.body});
     author.save()
-    .then(()=> res.status(200).json({message: "livre ajouté avec succés "}))
+    .then(()=> res.status(200).json({message: "author ajouté avec succés "}))
     .catch(error=>res.status(401).json({error}));
 };
 
